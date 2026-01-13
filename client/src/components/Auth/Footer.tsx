@@ -11,9 +11,10 @@ function Footer({ startupConfig }: { startupConfig: TStartupConfig | null | unde
 
   const privacyPolicyRender = privacyPolicy?.externalUrl && (
     <a
-      className="text-sm text-red-500"
+      className="text-sm text-red-600 underline decoration-transparent transition-all duration-200 hover:text-red-700 hover:decoration-red-700 focus:text-red-700 focus:decoration-red-700 dark:text-red-500 dark:hover:text-red-400 dark:hover:decoration-red-400 dark:focus:text-red-400 dark:focus:decoration-red-400"
       href={privacyPolicy.externalUrl}
-      target={privacyPolicy.openNewTab ? '_blank' : undefined}
+      // Removed for WCAG compliance
+      // target={privacyPolicy.openNewTab ? '_blank' : undefined}
       rel="noreferrer"
     >
       {localize('com_ui_privacy_policy')}
@@ -22,9 +23,10 @@ function Footer({ startupConfig }: { startupConfig: TStartupConfig | null | unde
 
   const termsOfServiceRender = termsOfService?.externalUrl && (
     <a
-      className="text-sm text-red-500"
+      className="text-sm text-red-600 underline decoration-transparent transition-all duration-200 hover:text-red-700 hover:decoration-red-700 focus:text-red-700 focus:decoration-red-700 dark:text-red-500 dark:hover:text-red-400 dark:hover:decoration-red-400 dark:focus:text-red-400 dark:focus:decoration-red-400"
       href={termsOfService.externalUrl}
-      target={termsOfService.openNewTab ? '_blank' : undefined}
+      // Removed for WCAG compliance
+      // target={termsOfService.openNewTab ? '_blank' : undefined}
       rel="noreferrer"
     >
       {localize('com_ui_terms_of_service')}

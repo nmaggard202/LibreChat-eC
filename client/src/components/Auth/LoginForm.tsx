@@ -51,7 +51,7 @@ const LoginForm: React.FC<TLoginFormProps> = ({ onSubmit, startupConfig, error, 
   const renderError = (fieldName: string) => {
     const errorMessage = errors[fieldName]?.message;
     return errorMessage ? (
-      <span role="alert" className="mt-1 text-sm text-red-500 dark:text-red-900">
+      <span role="alert" className="mt-1 text-sm text-red-600 dark:text-red-500">
         {String(errorMessage)}
       </span>
     ) : null;
@@ -147,7 +147,7 @@ const LoginForm: React.FC<TLoginFormProps> = ({ onSubmit, startupConfig, error, 
         {startupConfig.passwordResetEnabled && (
           <a
             href="/forgot-password"
-            className="inline-flex p-1 text-sm font-medium text-red-600 transition-colors hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
+            className="inline-flex p-1 text-sm font-medium text-red-600 underline decoration-transparent transition-all duration-200 hover:text-red-700 hover:decoration-red-700 focus:text-red-700 focus:decoration-red-700 dark:text-red-500 dark:hover:text-red-400 dark:hover:decoration-red-400 dark:focus:text-red-400 dark:focus:decoration-red-400"
           >
             {localize('com_auth_password_forgot')}
           </a>

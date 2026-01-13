@@ -105,7 +105,7 @@ const VersionCard = ({
       className={cn(
         'group relative w-full rounded-lg border border-border-light p-4 transition-all duration-300',
         isSelected
-          ? 'bg-surface-hover shadow-xl'
+          ? 'bg-surface-secondary shadow-xl ring-2 ring-gray-400'
           : 'bg-surface-primary shadow-sm hover:bg-surface-secondary',
       )}
       onClick={onClick}
@@ -125,7 +125,9 @@ const VersionCard = ({
 
         <div className="flex items-center gap-1 lg:flex-col xl:flex-row">
           {authorName && (
-            <Label className="text-left text-xs text-text-secondary">by {authorName}</Label>
+            <Label className="text-left text-xs text-text-secondary">
+              {localize('com_ui_by_author', { 0: authorName })}
+            </Label>
           )}
 
           {tags.length > 0 && <VersionTags tags={tags} />}
