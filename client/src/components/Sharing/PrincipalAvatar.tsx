@@ -45,8 +45,8 @@ export default function PrincipalAvatar({
       case PrincipalType.GROUP:
         return {
           Icon: Users,
-          containerClass: 'bg-green-100 dark:bg-green-900',
-          iconClass: 'text-green-600 dark:text-green-400',
+          containerClass: 'bg-red-100 dark:bg-red-900',
+          iconClass: 'text-red-600 dark:text-red-400',
         };
       case PrincipalType.ROLE:
         return {

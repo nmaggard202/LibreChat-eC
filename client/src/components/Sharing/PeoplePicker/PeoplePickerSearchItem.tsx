@@ -30,7 +30,7 @@ const PeoplePickerSearchItem = forwardRef<HTMLDivElement, PeoplePickerSearchItem
           };
         case PrincipalType.GROUP:
           return {
-            className: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+            className: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
             label: localize('com_ui_group'),
           };
         case PrincipalType.ROLE:
